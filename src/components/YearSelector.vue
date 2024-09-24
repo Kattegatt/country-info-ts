@@ -24,9 +24,6 @@ import { getYearParam } from '../utils/params'
 const route = useRoute()
 const router = useRouter()
 
-const selectedYear = ref(
-  parseInt(getYearParam(route)) || new Date().getFullYear()
-)
 const windowWidth = ref(window.innerWidth)
 
 defineProps({

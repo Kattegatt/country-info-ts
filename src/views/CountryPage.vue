@@ -26,17 +26,6 @@ const router = useRouter()
 const { fetchOneCountry } = useCountries()
 const { holidays, loading, fetchHolidays } = useHolidays()
 
-// Utility to ensure params.year is a string, whether it's a string or array
-// const getYearParam = (): string => {
-//   const yearParam = route.params.year
-//   return Array.isArray(yearParam) ? yearParam[0] : yearParam
-// }
-
-// const getCodeParam = (): string => {
-//   const codeParam = route.params.code
-//   return Array.isArray(codeParam) ? codeParam[0] : codeParam
-// }
-
 const countryCode: Ref<string> = ref(getCodeParam(route))
 
 const selectedYear = ref(
@@ -57,7 +46,7 @@ const changeYear = (year: number) => {
 }
 
 const updateDataFromRoute = async () => {
-  selectedYear.value = parseInt(getYearParam(route)) || new Date().getFullYear()
+  selectedYear.value = parseInt(getYearParam(route)) //|| new Date().getFullYear()
   await fetchHolidays(countryCode.value, selectedYear.value)
 }
 

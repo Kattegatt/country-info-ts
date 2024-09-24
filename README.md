@@ -27,8 +27,6 @@ To start the development server:
 pnpm run dev
 ```
 
-The application will be available at http://localhost:5174.
-
 #### Project Structure
 
 - src/components/: Vue components
