@@ -1,16 +1,14 @@
-### Environment Variables
+### Preview
 
-To run this project, you will need to add the following environment variables to your .env file
-
-`VITE_API_BASE_URL`
+https://country-info-ts.vercel.app/
 
 ### Installation
 
 Clone the repository:
 
 ```
-git clone https://github.com/Kattegatt/country-info.git
-cd country-info
+git clone https://github.com/Kattegatt/country-info-ts.git
+cd country-info-ts
 ```
 
 Install dependencies:
@@ -32,7 +30,9 @@ pnpm run dev
 - src/components/: Vue components
 - src/views/: Vue views (pages)
 - src/composables/: Composable functions for API calls
-- src/router.js: Vue Router configuration
+- src/utils/: Utility functions
+- src/router.ts: Vue Router configuration
+- src/types.ts: Types for data
 
 #### Technology Stack
 
