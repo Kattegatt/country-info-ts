@@ -1,6 +1,6 @@
 <template>
   <div class="container mt-4">
-    <h1>Country Info</h1>
+    <h1>Holidays!</h1>
     <div class="row">
       <div class="col-md-6">
         <CountrySearch v-if="countries.length > 0" :countries="countries" />
@@ -16,14 +16,14 @@
 </template>
 
 <script setup lang="ts">
-import { onBeforeMount } from 'vue';
-import CountrySearch from '../components/CountrySearch.vue';
-import RandomCountriesWidget from '../components/RandomCountriesWidget.vue';
-import { useCountries } from '../composables/useCountries';
+import { onBeforeMount } from 'vue'
+import CountrySearch from '../components/CountrySearch.vue'
+import RandomCountriesWidget from '../components/RandomCountriesWidget.vue'
+import { useCountries } from '../composables/useCountries'
 
-const { countries, fetchCountries } = useCountries();
+const { countries, fetchCountries } = useCountries()
 
 onBeforeMount(async () => {
-  await fetchCountries();
-});
+  await fetchCountries()
+})
 </script>
